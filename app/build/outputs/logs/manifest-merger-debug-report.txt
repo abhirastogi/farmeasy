@@ -25,6 +25,10 @@ ADDED from /home/abhishek/Desktop/kisaan/sampleAzure/FarmEasy/app/src/main/Andro
 		ADDED from /home/abhishek/Desktop/kisaan/sampleAzure/FarmEasy/app/src/main/AndroidManifest.xml:7:9-34
 		INJECTED from /home/abhishek/Desktop/kisaan/sampleAzure/FarmEasy/app/src/main/AndroidManifest.xml
 		INJECTED from /home/abhishek/Desktop/kisaan/sampleAzure/FarmEasy/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/abhishek/Desktop/kisaan/sampleAzure/FarmEasy/app/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /home/abhishek/Desktop/kisaan/sampleAzure/FarmEasy/app/src/main/AndroidManifest.xml:9:22-76
 uses-permission#android.permission.INTERNET
 ADDED from /home/abhishek/Desktop/kisaan/sampleAzure/FarmEasy/app/src/main/AndroidManifest.xml:10:5-67
 	android:name

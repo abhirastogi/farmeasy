@@ -51,6 +51,14 @@
             android:onClick="addItem"
             android:text="@string/add_button_text" />
 
+         <Button
+             android:id="@+id/show_location"
+             android:layout_width="64dip"
+             android:layout_height="wrap_content"
+             android:text="show location"
+
+             />
+
     </LinearLayout>
 
     <ListView

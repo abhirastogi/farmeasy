@@ -15,9 +15,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -76,11 +78,35 @@ public class ToDoActivity extends Activity {
     /**
      * Initializes the activity
      */
+    Button btnShowLocation;
+
+    GPSLocation gps;
+
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_do);
 
+
+        btnShowLocation=(Button) findViewById(R.id.show_location);
+
+        btnShowLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gps=new GPSLocation(ToDoActivity.this);
+
+                if(gps.canGetLocation()){
+                    double latitude=gps.getLatitude();
+                    double longitude=gps.getLongitude();
+
+                    Toast.makeText(getApplicationContext(),"Your Location is "+latitude+"dsjldfksjl"+longitude, Toast.LENGTH_LONG).show();
+                } else{
+                    gps.showSettingsAlert();
+                }
+            }
+        });
         mProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
 
         // Initialize the progress bar
